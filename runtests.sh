@@ -5,6 +5,7 @@
 
 echo -e "\n[+] `date` -> CentOS QA $0 starting."
 
+# need to make sure we have functional dns
 yum -d0 -y install bind-utils 
 
 host repo.centos.qa > /dev/null

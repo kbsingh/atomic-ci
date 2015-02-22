@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ret_val=0
-BaseDir=`dirname $0`
 
 #cleanup
 rm new.key* meta-data user-data configdrive.iso
@@ -30,5 +29,7 @@ if [ $? -ne 0 ]; then
   ret_val=1
 fi
 
+cp configdrive.iso ../../runtime-assets/
+cp new.key ../../runtime-assets/sshkey
 
 t_CheckExitStatus $ret_val
