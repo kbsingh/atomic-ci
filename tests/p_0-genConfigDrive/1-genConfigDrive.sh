@@ -29,7 +29,7 @@ if [ $? -ne 0 ]; then
   ret_val=1
 fi
 
-cp configdrive.iso ../../runtime-assets/
-cp new.key ../../runtime-assets/sshkey
+cp configdrive.iso ../../runtime_assets/
+cp new.key ../../runtime_assets/sshkey
 
 t_CheckExitStatus $ret_val
