@@ -16,3 +16,6 @@ if [ $dspace -lt 8388608 ]; then
   t_CheckExitStatus 1
   exit $FAIL
 fi
+
+
+t_InstallPackage curl unxz 
