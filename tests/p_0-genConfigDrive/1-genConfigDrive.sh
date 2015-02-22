@@ -3,7 +3,10 @@
 ret_val=0
 BaseDir=`dirname $0`
 
-ssh-keygen -t rsa b 2048 -N "" -f ${BaseDir}/new.key
+#cleanup
+rm new.key* meta-data user-data configdrive.iso
+
+ssh-keygen -t rsa -b 2048 -N "" -f new.key
 if [ $? -ne 0 ]; then
   echo 'Generating ssh key failed'
   ret_val=1
