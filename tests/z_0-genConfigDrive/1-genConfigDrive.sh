@@ -16,7 +16,7 @@ cat tpl_meta-data > meta-data
 cat tpl_user-data | sed "s|KEY|${sshkey}|" > user-data
 
 # generate the iso 
-genisoimage -output configdrive.iso -volid config -joliet -rock user-data meta-data
+genisoimage -output configdrive.iso -volid cidata -joliet -rock user-data meta-data
 if [ $? -ne 0 ]; then
   echo 'Generating iso file failed'
   ret_val=1
